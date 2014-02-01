@@ -2,6 +2,11 @@ Package.describe({
   summary: 'Routing specifically designed for Meteor'
 });
 
+Npm.depends({
+  'connect': '2.7.10',
+  'blueimp-md5': '1.1.0'
+});
+
 Package.on_use(function (api) {
   api.use('reactive-dict', ['client', 'server']);
   api.use('deps', ['client', 'server']);
@@ -27,7 +32,9 @@ Package.on_use(function (api) {
   api.add_files('lib/route_controller.js', ['client', 'server']);
   api.add_files('lib/router.js', ['client', 'server']);
 
+  api.add_files('.npm/package/node_modules/blueimp-md5/js/md5.js', 'client');
   api.add_files('lib/client/location.js', 'client');
+  api.add_files('lib/client/subscription_manager.js', 'client');
   api.add_files('lib/client/router.js', 'client');
   api.add_files('lib/client/wait_list.js', 'client');
   api.add_files('lib/client/hooks.js', 'client');
