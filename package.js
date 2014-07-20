@@ -2,11 +2,6 @@ Package.describe({
   summary: 'Routing specifically designed for Meteor'
 });
 
-Npm.depends({
-  'connect': '2.7.10',
-  'blueimp-md5': '1.1.0'
-});
-
 Package.on_use(function (api) {
   api.use('reactive-dict', ['client', 'server']);
   api.use('deps', ['client', 'server']);
