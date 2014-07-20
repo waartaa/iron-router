@@ -27,7 +27,6 @@ Package.on_use(function (api) {
   api.add_files('lib/route_controller.js', ['client', 'server']);
   api.add_files('lib/router.js', ['client', 'server']);
 
-  api.add_files('.npm/package/node_modules/blueimp-md5/js/md5.js', 'client');
   api.add_files('lib/client/location.js', 'client');
   api.add_files('lib/client/subscriptions/manager.js', 'client');
   api.add_files('lib/client/subscriptions/subscription.js', 'client');
